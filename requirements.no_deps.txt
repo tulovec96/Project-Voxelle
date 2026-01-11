@@ -1,0 +1,6 @@
+# JAIson Unified - No Dependencies Version
+# Install core packages without dependency resolution
+# Use: pip install --no-deps -r requirements.no_deps.txt
+
+rvc==0.3.5
+mcp>=1.0.0
