@@ -572,6 +572,32 @@ npm run dev
 
 ---
 
+## 🖥️ Frontend Enhancements (v2.0)
+
+The control panel has been significantly enhanced with professional-grade monitoring and management tools:
+
+### New Dashboard Pages
+- **Metrics Panel** - Real-time CPU, memory, latency, and request throughput with historical charts
+- **Logs Viewer** - Advanced filtering, search, and export capabilities for all service logs
+- **Configuration Manager** - View and edit configuration files with syntax highlighting
+- **API Playground** - Interactive REST client with request presets and response viewer
+
+### UI/UX Improvements
+- **Responsive Sidebar Navigation** - Desktop fixed sidebar, mobile hamburger menu
+- **Dark Mode Toggle** - Built-in theme switching with persistent preference
+- **Connection Status** - Real-time indicator showing server connection state
+- **Performance Monitoring** - Live charts showing CPU and memory usage trends
+
+### Real-time Features
+- WebSocket integration for instant server updates
+- Live service status with resource usage monitoring
+- Automatic reconnection on network failures
+- Real-time log streaming from all services
+
+For detailed frontend documentation, see [apps/frontend/README.md](apps/frontend/README.md).
+
+---
+
 ## ⚙️ Configuration
 
 ### 🎯 Core Server Configuration
