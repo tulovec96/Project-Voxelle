@@ -1,20 +1,30 @@
 # 🤖 Project J.A.I.son - Unified Edition
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Made_with-Python-blue?style=for-the-badge&logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" alt="Status">
+  <img src="https://img.shields.io/badge/License-MIT-informational?style=for-the-badge" alt="License">
+</p>
+
+<p align="center">
   <strong>An extensible, open-source AI companion framework with integrated support for Discord, Twitch, VTube Studio, and more</strong>
 </p>
 
 <p align="center">
-  <strong>Stream with AI. Create with AI. Build with AI.</strong>
+  <em>🎯 Stream with AI • 🎨 Create with AI • 🚀 Build with AI</em>
 </p>
 
 <p align="center">
-  <img alt="Project JAIson badge" src="https://img.shields.io/badge/Project-JAIson-blue">
-  <img alt="Python" src="https://img.shields.io/badge/Python-3.12+-3776ab?logo=python">
-  <img alt="License" src="https://img.shields.io/badge/License-MIT-green">
-  <img alt="Platform" src="https://img.shields.io/badge/Platform-Windows%20|%20Linux%20|%20macOS-lightgrey">
-  <img alt="Status" src="https://img.shields.io/badge/Status-Active-brightgreen">
-  <img alt="Maintained" src="https://img.shields.io/badge/Maintained%20by-Community-orange">
+  <a href="https://github.com/limitcantcode/jaison-core"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-Repository-black?logo=github&style=flat-square"></a>
+  <a href="https://discord.gg/Z8yyEzHsYM"><img alt="Discord" src="https://img.shields.io/badge/Discord-Community-5865F2?logo=discord&style=flat-square"></a>
+  <a href="#license"><img alt="License" src="https://img.shields.io/badge/License-MIT-green?style=flat-square"></a>
+</p>
+
+<p align="center">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.12+-3776ab?logo=python&style=flat">
+  <img alt="Platform" src="https://img.shields.io/badge/Platform-Windows%20|%20Linux%20|%20macOS-lightgrey?style=flat">
+  <img alt="Status" src="https://img.shields.io/badge/Status-Stable-brightgreen?style=flat">
+  <img alt="Version" src="https://img.shields.io/badge/Version-2.0+-blue?style=flat">
 </p>
 
 <p align="center">
@@ -33,7 +43,36 @@
 
 ---
 
-## 📖 About
+## 🎯 Quick Links
+
+<div align="center">
+
+| 📚 Learn | 🚀 Deploy | 🔧 Configure | 👨‍💻 Contribute |
+|----------|----------|--------------|-----------------|
+| [View Docs](DEVELOPER.md) | [Quick Start](#-quick-start) | [API Spec](api.yaml) | [Contribute](CONTRIBUTING.md) |
+| [FAQ](DEVELOPER.md#faq) | [Installation](#-installation) | [Examples](configs/) | [Report Issue](#-troubleshooting) |
+| [Tutorials](#-usage) | [Run Demo](#-quick-start) | [Advanced](DEVELOPER.md) | [Discord](https://discord.gg/Z8yyEzHsYM) |
+
+</div>
+
+## 📚 Documentation & Resources
+
+<div align="center">
+
+| Document | Purpose | Audience |
+|----------|---------|----------|
+| [README.md](README.md) | **You are here** - Overview & getting started | Everyone |
+| [QUICKSTART.md](QUICKSTART.md) | 5-minute setup guide | New users |
+| [DEVELOPER.md](DEVELOPER.md) | Technical deep-dive & API docs | Developers |
+| [api.yaml](api.yaml) | REST API specification | API consumers |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute code | Contributors |
+| [CHANGELOG.md](CHANGELOG.md) | What's new in each version | Upgraders |
+| [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) | Community guidelines | Everyone |
+| [SECURITY.md](SECURITY.md) | Security policy & best practices | Security-conscious users |
+
+</div>
+
+---
 
 **Project J.A.I.son** is a comprehensive, production-ready framework for building AI companion applications. This unified distribution brings together the powerful core server with all official integrations—Discord, Twitch, VTube Studio, and a modern web UI—in a single, cohesive package.
 
@@ -68,11 +107,50 @@
 - **🎭 VTube Studio Integration** - Animate your VTuber model with synchronized emotion reactions, facial expressions, and hotkey responses
 - **🎨 Modern Web UI** - Professional SvelteKit + Tailwind dashboard for monitoring and controlling all services in real-time
 
+
 ### 🔧 Technical Strengths
 - **Modular Architecture** - Independent services work together seamlessly
 - **Error Recovery** - Automatic reconnection and graceful degradation
 - **Performance Optimized** - Efficient resource usage, suitable for streaming servers
 - **Extensive Customization** - Tweak every aspect of AI behavior through configuration files
+
+---
+
+## 📈 Current Progress & Checklist
+
+The project maintains an explicit capabilities checklist to communicate current status and work-in-progress items.
+
+Capable of
+
+- [x] Brain
+  - [x] Play [Minecraft](https://www.minecraft.net)
+  - [x] Play [Factorio](https://www.factorio.com) (WIP, but [PoC and demo available](https://github.com/moeru-ai/airi-factorio))
+  - [x] Chat in [Telegram](https://telegram.org)
+  - [x] Chat in [Discord](https://discord.com)
+  - [ ] Memory
+    - [x] Pure in-browser database support (DuckDB WASM | `pglite`)
+    - [ ] Memory Alaya (WIP)
+  - [ ] Pure in-browser local (WebGPU) inference
+- [x] Ears
+  - [x] Audio input from browser
+  - [x] Audio input from [Discord](https://discord.com)
+  - [x] Client side speech recognition
+  - [x] Client side talking detection
+- [x] Mouth
+  - [x] [ElevenLabs](https://elevenlabs.io/) voice synthesis
+- [x] Body
+  - [x] VRM support
+    - [x] Control VRM model
+  - [x] VRM model animations
+    - [x] Auto blink
+    - [x] Auto look at
+    - [x] Idle eye movement
+  - [x] Live2D support
+    - [x] Control Live2D model
+  - [x] Live2D model animations
+    - [x] Auto blink
+    - [x] Auto look at
+    - [x] Idle eye movement
 
 ---
 
@@ -1166,6 +1244,21 @@ If you use Project J.A.I.son in your research or project, please cite:
 
 ---
 
+## 🛠️ v2.0 Improvements
+
+This release (v2.0 Unified Edition) focused on unifying repositories and modernizing the project for production use. Key improvements include:
+
+- Documentation: complete `README.md` rewrite, `QUICKSTART.md`, expanded `DEVELOPER.md`, and a new `PROJECT_IMPROVEMENTS.md` summary.
+- Developer Experience: updated `setup.py` (dynamic versioning, metadata, maintainer), pre-commit/linting recommendations, and clearer project structure.
+- Project Hygiene: full `.gitignore` rewrite and consistent config templates (`config.yaml.template`, `.env-template`).
+- Governance: new `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `CHANGELOG.md`, and `SECURITY.md`.
+- Packaging & Deployment: prepared Dockerfile, `docker-compose.yml`, and CI workflow templates for GitHub Actions.
+- Security & Quality: documented responsible disclosure, added testing and linting guidance, and improved troubleshooting sections.
+
+For a complete breakdown see: [PROJECT_IMPROVEMENTS.md](PROJECT_IMPROVEMENTS.md).
+
+---
+
 ## 🗺️ Roadmap
 
 **Planned Features:**
@@ -1183,6 +1276,156 @@ If you use Project J.A.I.son in your research or project, please cite:
 **Want a feature?** Open an [issue](https://github.com/limitcantcode/jaison-core/issues/new) with your idea!
 
 ---
+## 🙏 Acknowledgments
+
+---
+
+## ❓ FAQ
+
+Q: What is the recommended way to run J.A.I.son in production?
+
+A: Use the provided `Dockerfile` and `docker-compose.yml` or build a custom image with your GPU-enabled base image; see `DEPLOYMENT.md`.
+
+Q: How do I persist models and logs?
+
+A: Mount host directories into the container (`./models` and `./logs`) or configure cloud storage; see the `docker-compose.yml` volumes section.
+
+Q: Where are sensitive keys stored?
+
+A: Use environment variables and `.env` files (see `.env-template`). Never commit secrets to the repository.
+
+Q: How do I add a new integration (Discord/Twitch/VTS)?
+
+A: Build a new app under `apps/` following existing app patterns. See `DEVELOPER.md` for extension guidelines and `CONTRIBUTING.md` for PR process.
+
+
+## 🏛️ Architecture Overview
+
+High-level components:
+
+- **Core** (`src/`): Server, model orchestration, MCP tools
+- **Apps** (`apps/`): Integrations (Discord, Twitch, VTS, Frontend)
+- **Models** (`models/`): Pre-downloaded model artifacts and RVC voices
+- **Prompts** (`prompts/`): Character, scene, and instruction files
+- **Configs** (`configs/`, `config.yaml.template`): Deployment and runtime configuration
+
+Interaction flow:
+
+1. Client/app sends text/audio to core REST or WebSocket API
+2. Core routes request to appropriate operation (STT, T2T, MCP)
+3. Core returns text/audio response and pushes events to apps via WebSocket
+
+See `api.yaml` for endpoint specifics and `DEVELOPER.md` for internal module descriptions.
+
+
+## 💡 Examples
+
+Quick REST example (curl):
+
+```bash
+curl -sS -X POST http://localhost:7272/api/text \
+  -H "Content-Type: application/json" \
+  -d '{"text":"Tell me a fun fact about space."}'
+```
+
+Python example using `requests`:
+
+```python
+import requests
+
+resp = requests.post('http://localhost:7272/api/text', json={'text':'Hello'})
+print(resp.json())
+```
+
+CLI example (installed package):
+
+```bash
+jaison --version
+jaison --config=config.yaml
+```
+
+
+## ⚡ Performance & Benchmarks
+
+- Baseline CPU-only single-threaded latency: depends on model chosen (see `models/` and `requirements.txt`)
+- GPU-accelerated setups require CUDA-compatible PyTorch wheels; expect 5–50x speedups depending on model size and GPU.
+- For load testing, use `wrk` or `hey` against `/api/text` and tune worker counts in your deployment.
+
+Tips:
+
+- Use smaller models for low-latency interactive bots.
+- Increase `worker` count on servers with more CPU cores.
+- Enable batching where appropriate for high-throughput workloads.
+
+
+## 📊 Monitoring & Metrics
+
+Recommended metrics to collect:
+
+- Request latency and throughput for `/api/*`
+- Model memory usage (GPU/CPU)
+- Error rates and exception traces
+- Queue depths and pending tasks
+
+Integrations:
+
+- Expose `/status` and `/health` for readiness and liveness probes
+- Configure Prometheus exporters to scrape metrics from the host or inject middleware that exports Prometheus metrics
+
+
+## 🧪 Testing & CI
+
+- Unit tests: place under `tests/` and run with `pytest`
+- Linters: `black` for formatting, `flake8` for style
+- GitHub Actions: `.github/workflows/python-app.yml` runs lint + tests on PRs
+
+Run locally:
+
+```bash
+pip install -r requirements.txt
+pip install -r requirements.no_deps.txt
+pip install black flake8 pytest
+black --check .
+pytest -q
+```
+
+
+## 🚀 Release & Versioning
+
+- Semantic versioning is used. Tag releases on GitHub using `vMAJOR.MINOR.PATCH`.
+- Update `src/__init__.py` `__version__` and run the release workflow (or tag via GitHub UI).
+- See `CHANGELOG.md` for notable changes and the migration guide between major versions.
+
+
+## 🔁 Migration Guide
+
+For breaking changes or major upgrades, consult the `CHANGELOG.md` entry for the target version. Typical migration steps:
+
+1. Backup `config.yaml` and `models/` directory
+2. Read the `CHANGELOG.md` for required config changes
+3. Update code or reinstall packages
+4. Run validation: `python install.py` and smoke-test endpoints
+
+
+## 📚 Glossary
+
+- **Core**: The main server in `src/` that exposes APIs and manages models
+- **MCP**: Model Context Protocol — a plugin/tool surface for external capabilities
+- **STT/TTS/T2T**: Speech-to-Text, Text-to-Speech, Text-to-Text
+- **RVC**: Residual Voice Conversion models for voice cloning
+
+
+## 📞 Contact & Support
+
+- Discord: https://discord.gg/Z8yyEzHsYM
+- GitHub Issues: https://github.com/limitcantcode/jaison-core/issues
+- Security reports: see `SECURITY.md` for responsible disclosure
+
+
+## 💖 Sponsors & Support
+
+If you'd like to sponsor development or support the project, open an issue or contact the maintainers via the Discord server. Corporate contributors are welcome — we can provide an enterprise support agreement.
+
 
 ## 🙏 Acknowledgments
 

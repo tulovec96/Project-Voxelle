@@ -1,23 +1,41 @@
 #!/usr/bin/env python3
 """
 JAIson Unified - Setup & Installation Script
-CLI installer with setuptools configuration
+Professional setuptools configuration with full metadata
 
-Usage:
-    python setup.py --help
-    python setup.py develop
-    pip install -e .
+Installation methods:
+    pip install -e .                    # Development mode (recommended)
+    pip install .                       # Standard install
+    python setup.py install             # Legacy method
+    python setup.py develop             # For development
 """
 
 from setuptools import setup, find_packages
 from pathlib import Path
 import sys
+import re
+
+# Get version from package
+def get_version():
+    """Extract version from version file or default"""
+    version_file = Path(__file__).parent / "src" / "__init__.py"
+    if version_file.exists():
+        content = version_file.read_text()
+        match = re.search(r'__version__\s*=\s*["\']([^"\']*)["\']', content)
+        if match:
+            return match.group(1)
+    return "2.0.0"  # Default version
 
 # Read README
-readme_path = Path(__file__).parent / "README-UNIFIED.md"
+readme_path = Path(__file__).parent / "README.md"
 long_description = ""
+long_description_content_type = "text/markdown"
+
 if readme_path.exists():
     long_description = readme_path.read_text(encoding="utf-8")
+else:
+    long_description = """# Project J.A.I.son - Unified Edition
+An extensible, open-source AI companion framework with Discord, Twitch, VTube Studio integration."""
 
 # Core dependencies
 core_requirements = [
@@ -79,24 +97,29 @@ extras["all"] = sum(extras.values(), [])
 
 setup(
     name="jaison-unified",
-    version="2.0.0",
+    version=get_version(),
     description="JAIson Unified - AI Companion System with Discord, Twitch & VTube Studio Integration",
     long_description=long_description,
-    long_description_content_type="text/markdown",
+    long_description_content_type=long_description_content_type,
     author="JAIson Community",
-    author_email="contact@jaison.dev",
+    author_email="community@jaison.dev",
+    maintainer="tulovec96",
+    maintainer_email="tulov@example.com",
     url="https://github.com/limitcantcode/jaison-core",
     project_urls={
-        "Documentation": "https://github.com/limitcantcode/jaison-core/blob/main/README.md",
+        "Documentation": "https://github.com/limitcantcode/jaison-core/blob/main/DEVELOPER.md",
+        "API Spec": "https://github.com/limitcantcode/jaison-core/blob/main/api.yaml",
         "Discord": "https://discord.gg/Z8yyEzHsYM",
         "Source": "https://github.com/limitcantcode/jaison-core",
-        "Tracker": "https://github.com/limitcantcode/jaison-core/issues",
+        "Issue Tracker": "https://github.com/limitcantcode/jaison-core/issues",
+        "Changelog": "https://github.com/limitcantcode/jaison-core/blob/main/CHANGELOG.md",
     },
     license="MIT",
     packages=find_packages(include=["src", "src.*"]),
     python_requires=">=3.12",
     install_requires=core_requirements,
     extras_require=extras,
+    include_package_data=True,
     entry_points={
         "console_scripts": [
             "jaison=src.main:cli",
@@ -104,17 +127,32 @@ setup(
             "jaison-install=install:main",
         ],
     },
+    keywords=[
+        "ai",
+        "companion",
+        "discord",
+        "twitch",
+        "vtuber",
+        "streaming",
+        "chatbot",
+        "framework",
+    ],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Environment :: Console",
         "Intended Audience :: Developers",
         "Intended Audience :: End Users/Desktop",
+        "Intended Audience :: Information Technology",
         "License :: OSI Approved :: MIT License",
         "Natural Language :: English",
         "Operating System :: OS Independent",
+        "Operating System :: Microsoft :: Windows",
+        "Operating System :: POSIX :: Linux",
+        "Operating System :: MacOS",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: 3.13",
+        "Programming Language :: Python :: Implementation :: CPython",
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Multimedia :: Sound/Audio",
         "Topic :: Scientific/Engineering :: Artificial Intelligence",

@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  jaison:
+    build: .
+    container_name: jaison_core
+    ports:
+      - "7272:7272"
+      - "7273:7273"
+    volumes:
+      - ./config.yaml.template:/app/config.yaml:ro
+      - ./models:/app/models
+      - ./logs:/app/logs
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
+  # Optional: frontend service (if using included frontend)
+  frontend:
+    image: node:20-alpine
+    working_dir: /app/frontend
+    volumes:
+      - ./apps/frontend:/app/frontend
+    command: sh -c "cd /app/frontend && npm install && npm run build && npm run preview -- --port 5173"
+    ports:
+      - "5173:5173"
+    restart: unless-stopped
