@@ -6,17 +6,18 @@ We take security seriously. If you discover a security vulnerability in Project 
 
 ### Do Not
 
-- ❌ Open a public issue
-- ❌ Post on Discord publicly
-- ❌ Share vulnerability details publicly
+- ❌ Post exploit code or full vulnerability details in public forums if it exposes users
 - ❌ Exploit the vulnerability
+
+> Note: For low-severity or non-sensitive security issues, opening a public GitHub issue is acceptable (see guidance below). For anything that could enable attackers or expose sensitive data, please follow the private reporting guidance.
 
 ### Do
 
-- ✅ Email security@jaison.dev with details
+- ✅ Email security@jaison.dev with details for critical or high-impact vulnerabilities
 - ✅ Include steps to reproduce (if possible)
+- ✅ If you open a GitHub issue for non-sensitive or low-severity findings, mark it clearly as `security` in the title or labels
 - ✅ Allow time for us to investigate and release fixes
-- ✅ Use PGP encryption if possible
+- ✅ Use PGP encryption if possible when sending sensitive information by email
 
 ### What to Include
 
@@ -37,9 +38,18 @@ Contact:
 
 ---
 
+## Reporting Options & Expected Response Time
+
+We support two reporting paths depending on severity and sensitivity:
+
+- **Private (recommended for critical issues):** Email `security@jaison.dev` with reproducer and sensitive details. Use PGP if possible. This helps prevent public exposure while we investigate and prepare a patch.
+- **Public (acceptable for low-severity/non-sensitive issues):** Open a GitHub issue. Please avoid posting sensitive reproducer details publicly; instead include high-level info and ask maintainers to follow up for private details.
+
+We aim to acknowledge reports within 24–72 hours on business days. Responses may be delayed over weekends, public holidays, or during maintainer vacations — please allow extra time in those cases.
+
 ## Security Process
 
-1. **Receipt** - You'll receive acknowledgment within 24 hours
+1. **Receipt** - You'll receive acknowledgment (via GitHub issue comment or email) typically within 24–72 hours on business days
 2. **Investigation** - We investigate and reproduce the issue
 3. **Fix** - We develop and test a fix
 4. **Release** - We release a patched version
@@ -257,9 +267,10 @@ security_logger.info(f"User {user} accessed {resource}")
 
 ## Contact
 
-- **Email**: security@jaison.dev
-- **Discord**: [Report in security channel](https://discord.gg/Z8yyEzHsYM)
-- **PGP**: Available upon request
+- **Email**: security@jaison.dev (preferred for critical vulnerabilities)
+- **GitHub Issues**: Open an issue for non-sensitive findings — use `security:` prefix in the title or request that maintainers convert it to a private disclosure if needed
+- **Discord**: (do not post details publicly) contact maintainers in the private security channel or DM: [Discord Server](https://discord.gg/Z8yyEzHsYM)
+- **PGP**: Available upon request (reply to `security@jaison.dev` for the key)
 
 ---
 
