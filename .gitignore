@@ -1,26 +1,28 @@
 # =============================================================================
-# PROJECT J.A.I.SON - .gitignore
+# PROJECT VOXELLE - .gitignore
 # =============================================================================
 
-# ============ Custom JAIson Files ============
+# ============ Custom Voxelle Files ============
 ffmpeg
 ffmpeg.exe
 ffprobe
 ffprobe.exe
 *.7z
 model-downloads/
+tokens/
 
 # ============ Environment & Secrets ============
 .env
 .env.*
+!.env.example
 .env.local
-.env.*.local
-.env-template
 .env.production
 .env.staging
 secrets/
 *.key
 *.pem
+*.p12
+credentials.json
 
 # ============ Configuration ============
 config.yaml
@@ -48,6 +50,7 @@ wheels/
 eggs/
 parts/
 var/
+
 develop-eggs/
 
 # ============ Virtual Environments ============

@@ -1,0 +1,42 @@
+# Bandit security checks configuration
+# See https://bandit.readthedocs.io/en/latest/config.html
+
+# Exclude test files from security checks
+exclude_dirs:
+  - tests
+  - docs
+  - examples
+
+# Test severity level
+skips:
+  # B101: assert_used - Assertions are fine in tests
+  - B101
+
+# Specify which tests should be run at what level
+tests:
+  - B201  # flask_debug_true
+  - B301  # pickle
+  - B302  # marshal
+  - B303  # md5
+  - B304  # cipher
+  - B305  # cipher
+  - B306  # mktemp_q
+  - B307  # eval
+  - B308  # mark_safe
+  - B309  # httpsconnection
+  - B310  # url_open
+  - B311  # random
+  - B312  # telnetlib
+  - B313  # xml_bad_expat
+  - B314  # xml_bad_etree
+  - B315  # xml_bad_sax
+  - B316  # xml_bad_pulldom
+  - B317  # xml_bad_etree
+  - B318  # xml_bad_etree
+  - B319  # xml_bad_etree
+  - B320  # xml_bad_etree
+  - B321  # ftplib
+  - B322  # unverified_context
+  - B323  # unverified_context
+  - B324  # hashlib
+  - B325  # tempnam
